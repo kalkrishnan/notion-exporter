@@ -23,7 +23,7 @@ else
   BRANCH="${GITHUB_REF##*/}"
 fi
 
-COMMIT_MESSAGE="$commit_message"
+MESSAGE="$COMMIT_MESSAGE"
 # Use this user email https://github.com/actions
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config --global user.name "${GITHUB_ACTOR}"
@@ -38,7 +38,7 @@ echo ":: Exporting ${PAGES} into ${OUTPUT}"
 find "${OUTPUT}"
 
 set +e
-cd "${REPO}" && git add "$2" && git commit -am "${COMMIT_MESSAGE}"
+cd "${REPO}" && git add "$2" && git commit -am "${MESSAGE}"
 set -e
 
 if [ "$?" -ne "0" ]; then
