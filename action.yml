@@ -29,6 +29,7 @@ runs:
     GITHUB_TOKEN: "${{ inputs.github-token }}"
     NOTION_TOKEN: "${{ inputs.notion-token }}"
     FORCE_BRANCH: "${{ inputs.force_branch }}"
+    COMMIT_MESSAGE: "${{ inputs.commit_message }}"
   args:
     - "${{ inputs.pages }}"
     - "${{ inputs.output-dir }}"
