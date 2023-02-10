@@ -16,7 +16,7 @@ inputs:
     output-dir:
         description: "Directory under your repo to sync the data to; note the existing files will be deleted"
         required: true
-    force-branch:
+    FORCE_BRANCH:
         description: "Override the branch to use, defaults to the branch you run your workflow on"
         required: false
 runs:
@@ -25,7 +25,7 @@ runs:
   env:
     GITHUB_TOKEN: "${{ inputs.github-token }}"
     NOTION_TOKEN: "${{ inputs.notion-token }}"
-    FORCE_BRANCH: "${{ inputs.force-branch }}"
+    FORCE_BRANCH: "${{ inputs.force_branch }}"
   args:
     - "${{ inputs.pages }}"
     - "${{ inputs.output-dir }}"
