@@ -37,7 +37,7 @@ echo ":: Exporting ${PAGES} into ${OUTPUT}"
 find "${OUTPUT}"
 
 set +e
-cd "${REPO}" && git add "$2" && git commit -am "Pulled content from notion at ${NOW}"
+cd "${REPO}" && git add "$2" && git commit -am "${commit-message}"
 set -e
 
 if [ "$?" -ne "0" ]; then
