@@ -24,7 +24,7 @@ else
 fi
 
 # Use this user email https://github.com/actions
-git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
+git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config --global user.name "${GITHUB_ACTOR}"
 git config --global github.token "${GITHUB_TOKEN}"
 
