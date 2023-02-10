@@ -19,7 +19,7 @@ inputs:
     FORCE_BRANCH:
         description: "Override the branch to use, defaults to the branch you run your workflow on"
         required: false
-    commit-message:
+    commit_message:
         description: "commit message for specific change"
         required: false
 runs:
