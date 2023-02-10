@@ -23,7 +23,7 @@ else
   BRANCH="${GITHUB_REF##*/}"
 fi
 
-COMMIT_MESSAGE = "$commit_message"
+COMMIT_MESSAGE="$commit_message"
 # Use this user email https://github.com/actions
 git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 git config --global user.name "${GITHUB_ACTOR}"
